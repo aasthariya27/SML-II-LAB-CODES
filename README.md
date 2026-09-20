@@ -93,10 +93,9 @@ Rows: __ · Class balance: __ / __
 |:--:|---|---|---|---|---|
 | 8 | Simulated Annealing to minimise f(x) = x² + 10·sin(x) | Probabilistic global optimisation | None — analytic objective function | Synthetic · 1-D function | [`Q8_SA_Minimization.ipynb`](notebook/Q8_SA_Minimization%20%282%29.ipynb) |
 | 9.1 | Genetic Algorithm (GA) — Part 1: maximise a fitness function | Evolutionary / population-based optimisation | None — synthetic search space | Synthetic · optimization | [`Q9_1_Genetic_Algorithm_Maximize.ipynb`](notebook/Q9_1_Genetic_Algorithm_Maximize.ipynb) |
-| 9.2 | Genetic Algorithm (GA) — Part 2: minimise a fitness function (e.g. Traveling Salesman tour distance) | Evolutionary / population-based optimisation | None — synthetic search space | Synthetic · optimization | [`Q9_2_Genetic_Algorithm_Minimize.ipynb`](notebook/Q9_2_Genetic_Algorithm_Minimize.ipynb) ⚠️ |
+| 9.2 | Genetic Algorithm (GA) — Part 2: minimise a fitness function (e.g. Traveling Salesman tour distance) | Evolutionary / population-based optimisation | None — synthetic search space | Synthetic · optimization | [`Q9_2_Genetic_Algorithm_Minimize.ipynb`](notebook/Q9_2_Genetic_Algorithm_Minimize.ipynb)  |
 
-> ⚠️ The Q9.2 filename is my best guess from a truncated screenshot — confirm the exact name and fix this one link if it doesn't match.
-
+> 
 ---
 
 ## Repository structure
