@@ -1,0 +1,25 @@
+# --- data (never commit large datasets) ---
+archive/
+BSDS500/
+data/
+*.mat
+*.jpg
+*.jpeg
+*.png
+*.csv
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- jupyter ---
+.ipynb_checkpoints/
+
+# --- os / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
