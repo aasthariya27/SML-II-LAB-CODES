@@ -20,7 +20,8 @@ from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-BASE_DIR = r"C:\Users\BIT\Desktop\ied1001723\sem 7\SML - II lab\archive (1)"   # <-- change this to your extracted folder path
+import os
+BASE_DIR = os.environ.get("BSDS_DIR", "archive")
 SPLIT = "train"                 # "train", "test", or "val"
 IMG_SIZE = (32, 32)             # resize target (like flattening MNIST to a vector)
 
