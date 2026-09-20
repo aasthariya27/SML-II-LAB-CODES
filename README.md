@@ -39,6 +39,8 @@ BSDS500 is a computer-vision benchmark: 500 natural images, each hand-annotated 
 
 That single feature table is then reused, unchanged, across every question — including the ones whose original prompt named a different dataset — so results stay directly comparable from Q1 to Q7.
 
+The prepared data lives in [`dataset/`](dataset/); generated figures and metrics are written to [`results/`](results/).
+
 > **Source:** [BSDS500 — UC Berkeley Computer Vision Group](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)
 >
 > Reference: Arbeláez, Maire, Fowlkes and Malik, *Contour Detection and Hierarchical Image Segmentation*, IEEE TPAMI 33(5), 2011.
@@ -75,13 +77,13 @@ Rows: __ · Class balance: __ / __
 
 | # | Lab Task | Technique | Dataset | Dataset Type | Code |
 |:--:|---|---|---|---|---|
-| 1 | k-Nearest Neighbours classifier implemented from scratch | Instance-based / distance-based classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q1_KNN.ipynb`](Q1_KNN.ipynb) |
-| 2 | Decision Tree classifier built with scikit-learn, with tree visualisation | Tree-based classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q2_DECISION_TREE.ipynb`](Q2_DECISION_TREE.ipynb) |
-| 3 | Gaussian Naive Bayes classification | Probabilistic classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q3_Gaussian_Naive_Bayes.ipynb`](Q3_Gaussian_Naive_Bayes.ipynb) |
-| 4 | Logistic Regression implemented from scratch using gradient descent | Linear model · binary classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q4_logistic_regression.ipynb`](Q4_logistic_regression.ipynb) |
-| 5 | PCA and t-SNE to reduce the feature space to 2D and visualise clusters | Unsupervised dimensionality reduction | BSDS500 pixel features | Image-derived tabular · high-dimensional | [`Q5_PCA_tSNE.py`](Q5_PCA_tSNE.py) |
-| 6 | Detection and treatment of outliers using z-score and IQR | Data preprocessing / data quality | BSDS500 pixel features | Image-derived tabular · continuous | [`Q6_outlier_detection.ipynb`](Q6_outlier_detection.ipynb) |
-| 7 | Accuracy, precision, recall, F1-score and ROC-AUC compared for Logistic Regression vs SVM | Model evaluation & comparison | BSDS500 pixel features | Image-derived tabular · binary | [`Q7_ROC_AUC.ipynb`](Q7_ROC_AUC.ipynb) |
+| 1 | k-Nearest Neighbours classifier implemented from scratch | Instance-based / distance-based classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q1_KNN.ipynb`](notebook/Q1_KNN.ipynb) |
+| 2 | Decision Tree classifier built with scikit-learn, with tree visualisation | Tree-based classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q2_DECISION_TREE.ipynb`](notebook/Q2_DECISION_TREE.ipynb) |
+| 3 | Gaussian Naive Bayes classification | Probabilistic classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q3_Gaussian_Naive_Bayes.ipynb`](notebook/Q3_Gaussian_Naive_Bayes.ipynb) |
+| 4 | Logistic Regression implemented from scratch using gradient descent | Linear model · binary classification | BSDS500 pixel features | Image-derived tabular · binary | [`Q4_logistic_regression.ipynb`](notebook/Q4_logistic_regression.ipynb) |
+| 5 | PCA and t-SNE to reduce the feature space to 2D and visualise clusters | Unsupervised dimensionality reduction | BSDS500 pixel features | Image-derived tabular · high-dimensional | [`Q5_PCA_tSNE.py`](notebook/Q5_PCA_tSNE.py) |
+| 6 | Detection and treatment of outliers using z-score and IQR | Data preprocessing / data quality | BSDS500 pixel features | Image-derived tabular · continuous | [`Q6_outlier_detection.ipynb`](notebook/Q6_outlier_detection.ipynb) |
+| 7 | Accuracy, precision, recall, F1-score and ROC-AUC compared for Logistic Regression vs SVM | Model evaluation & comparison | BSDS500 pixel features | Image-derived tabular · binary | [`Q7_ROC_AUC.ipynb`](notebook/Q7_ROC_AUC.ipynb) |
 
 **On the lab sheet's named datasets.** Q1 and Q2 specify Iris, Q3 specifies a spam/ham corpus and Q5 specifies MNIST. Per the lab instruction to work on one assigned dataset throughout, the BSDS500-derived feature table replaces all of them. The algorithm being demonstrated is unchanged — only the input differs.
 
@@ -89,7 +91,7 @@ Rows: __ · Class balance: __ / __
 
 | # | Lab Task | Technique | Dataset | Dataset Type | Code |
 |:--:|---|---|---|---|---|
-| 8 | Simulated Annealing to minimise f(x) = x² + 10·sin(x) | Probabilistic global optimisation | None — analytic objective function | Synthetic · 1-D function | [`Q8_SA_Minimization.ipynb`](Q8_SA_Minimization.ipynb) |
+| 8 | Simulated Annealing to minimise f(x) = x² + 10·sin(x) | Probabilistic global optimisation | None — analytic objective function | Synthetic · 1-D function | [`Q8_SA_Minimization.ipynb`](notebook/Q8_SA_Minimization%20%282%29.ipynb) |
 
 ---
 
@@ -97,14 +99,19 @@ Rows: __ · Class balance: __ / __
 
 ```
 SML-II-LAB-CODES/
-├── Q1_KNN.ipynb                    # Q1 — k-NN from scratch
-├── Q2_DECISION_TREE.ipynb          # Q2 — Decision Tree (scikit-learn) + visualisation
-├── Q3_Gaussian_Naive_Bayes.ipynb   # Q3 — Gaussian Naive Bayes
-├── Q4_logistic_regression.ipynb    # Q4 — Logistic Regression from scratch
-├── Q5_PCA_tSNE.py                  # Q5 — PCA & t-SNE to 2D
-├── Q6_outlier_detection.ipynb      # Q6 — z-score & IQR outlier handling
-├── Q7_ROC_AUC.ipynb                # Q7 — LR vs SVM, full metric comparison
-├── Q8_SA_Minimization.ipynb        # Q8 — Simulated Annealing
+├── dataset/                            # BSDS500-derived feature table
+├── notebook/
+│   ├── Q1_KNN.ipynb                    # Q1 — k-NN from scratch
+│   ├── Q2_DECISION_TREE.ipynb          # Q2 — Decision Tree (scikit-learn) + visualisation
+│   ├── Q3_Gaussian_Naive_Bayes.ipynb   # Q3 — Gaussian Naive Bayes
+│   ├── Q4_logistic_regression.ipynb    # Q4 — Logistic Regression from scratch
+│   ├── Q5_PCA_tSNE.py                  # Q5 — PCA & t-SNE to 2D
+│   ├── Q6_outlier_detection.ipynb      # Q6 — z-score & IQR outlier handling
+│   ├── Q7_ROC_AUC.ipynb                # Q7 — LR vs SVM, full metric comparison
+│   └── Q8_SA_Minimization.ipynb        # Q8 — Simulated Annealing
+├── results/                            # Generated figures and metrics
+├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
@@ -137,22 +144,22 @@ Create an environment and install dependencies:
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install numpy pandas scikit-learn matplotlib seaborn scipy jupyter
+pip install -r requirements.txt
 ```
-
-**Get the data.** The BSDS500 images and the derived feature table are not committed to this repository. Download BSDS500 from the [Berkeley Computer Vision Group](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html), then generate the feature table before running any notebook.
 
 Run the notebooks:
 
 ```bash
-jupyter notebook
+jupyter notebook notebook/
 ```
 
 Or run the standalone script:
 
 ```bash
-python Q5_PCA_tSNE.py
+python notebook/Q5_PCA_tSNE.py
 ```
+
+To rebuild the feature table from the original images, download BSDS500 from the [Berkeley Computer Vision Group](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html).
 
 ---
 
