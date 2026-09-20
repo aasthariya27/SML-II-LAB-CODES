@@ -88,6 +88,6 @@ README.md
 
 ## Author
 
-**Aastha Riya** — Integrated M.Sc., Quantitative Economics & Data Science,
+**Aastha** — Integrated M.Sc., Quantitative Economics & Data Science,
 BIT Mesra
 [GitHub](https://github.com/aasthariya27)
